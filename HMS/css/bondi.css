@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     background-color:rgba(0,0,0,.1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+    
+}
+.header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(90deg,transparent ,rgba(255,255,255,.4)transparent);
+    transition: .5s;
+}
+.header:hover::after{
+    left: 100%;
+
+}
+
+.logo{
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+.navbar a{
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+#check{
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width:992px){
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width:768px){
+    .icons{
+        display:inline-flex;
+    }
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color:rgba(0,0,0,.1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    #check:checked~.navbar{
+        height: 17.7rem;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a{
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+}
+.landing{   /*the backgorund color*/
+    background-color: #19283f;
+    min-height: calc(100vh - 72px);
+}
+.feat .icon-holder{
+    height: 200px;
+   
+}
+.feat .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.feat .icon-holder .number{
+    
+    font-size: 12rem;
+    color: #eff7fa;
+}
+
+.feat .icon-holder .icon{
+    color: var(--green-color);
+}
+
+.main-btn{
+    background-color:red;
+   padding: 0.5rem 1rem; /*the form for the botton*/
+    color: yellow;
+
+}
+.main-btn:hover{ /*when you put the mouse the color is deffirent*/
+    color: white;
+}
+.main-title::after{  /*for the green line */
+    content: "";
+    width: 190px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.out-work{
+    background-color: var(--green-color);
+}
+.our-work ul .active{
+    background-color: red;
+    color: yellow;
+}
+.our-work ul li{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.our-work ul li:not(.active):hover{
+    color: red;
+}
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.our-work .box::before{   /*to put a word before every image */
+    content: attr(data-work);
+    position: absolute;
+    background-color: rgb(51 209 204 / 76%);
+    width:calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+
+}
+.our-work .box:hover::before {
+    transform: translateX(0);
+}
+.stuff .des{
+    max-width: 500px;
+}
+.stuff  .row{
+    left: 2px;
+    top: 100px;
+    position: relative; 
+}
+.team{
+    margin-top: 45px;
+    background-color: #eff7fa;
+}
+.team h2{
+    color: red;
+}
+.project{
+    background-color:#eff7fa
+}
+.subs{
+    background-color:rgba(0,0,0,.1);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+.subs input [type="text"]:focus{
+    outline: none;
+}
+.subs ::placeholder{
+    color: white;
+}
+.subs input[type="text"]{
+    border: none;
+    border-bottom: 1px solid white;
+}
+.subs input[type="submit"]{
+    background-color: #19283f;
+    color: yellow;
+   
+}
+.footer{
+    background-color: #19283f;
+
+}
+.list-unstyled li{
+    margin-right: 170px;
+    margin-top: 20px;
+   
+}
+h5{
+    margin-right: 170px;
+    padding-top: 20px;
+   
+}
+.footer .copyright div span{
+    color: yellow;
+}
+.footer ul svg{
+    width: 20px;
+    height: 20px;
+}
+.footer .twitter{
+    
+   display: flex;
+   justify-content: space-evenly;
+    background-color:#1da1f2;
+}
+.footer .facebook{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:#1877f2;
+}
+.footer .instagram{
+    display: flex;
+   justify-content: space-evenly;
+    background-color: #e1306c;
+}
+.footer .linkedin{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:#83941f;
+}
+
+.footer .copyright > span{
+    color: green;
+}
+.contact{
+    position: relative;
+    left: 800px;
+    margin-top: -460px;
+}
+.social-media-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default list padding */
+    display: flex; /* Use flexbox to arrange them horizontally */
+  }
+  
+  .social-media-list li {
+    margin-right: 30px; /* Add some space between each social media icon/link */
+    left: 80px;
+    position: relative;
+  }
+  
+  
+  
+
+
+
+
+
+
+
+
+
+

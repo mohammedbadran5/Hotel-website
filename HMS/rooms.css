@@ -1,0 +1,1774 @@
+.land1{
+    background-color: #265a5b;
+    width: 900px;
+    height: 730px;
+    position: absolute;
+    left: 620px;
+
+}
+.land2{
+    background-color: #384158;
+    width: 830px;
+    height: 730px;
+    position: absolute;
+    left: -700px;
+}
+.land2 img{
+    position: absolute;
+    width: 830px;
+    height: 800px;
+}
+.land1 .image2 img{
+    position: absolute;
+    width: 400px;
+    height: 570px;
+    top:157px;
+    left: 320px;
+}
+*{  /* this one is for all the code */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+body{ /* this one is for the body and it is not nessaccery */
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+.header{ /* this one for the navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header::before{ /* this one is for the navbar */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+.header::after{  /* this one is for the navbar */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.header:hover::after{ /* this one is for the navbar */ 
+    left: 100%;
+
+}
+
+
+.navbar a{ /* this one is for the navbar */
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    left: -90px;
+    margin-right: 30px;
+    top: 50px;
+}
+
+#check{ 
+    display: none;
+}
+
+.icons{ /* this one is for the item in the navbar */
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width:992px){
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width:768px){
+    .icons{
+        display:inline-flex;
+    }
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color:rgba(0,0,0,.1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    #check:checked~.navbar{
+        height: 17.7rem;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+        position: relative;
+        margin-right: 20px;
+        left: 10px;
+        top: 1px;
+    }
+
+    #check:checked~.navbar a{
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+}
+.navbar a:hover{
+    color: #C19743;
+}
+.navbar a.active  {
+    color: #C19743; /* Change the text color to your desired color */
+}
+.navbar-menu li.active a {
+    color: #C19743; /* Change the text color to your desired color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.room2 h1{
+    font-size: 330px;
+    position: absolute;
+    top: 1700px;
+    left: 35px;
+    font-family:Georgia, serif ;
+    letter-spacing: 60px;
+    color: #DADADA;
+    opacity: .5;
+}
+
+
+
+
+.adding a:hover{
+    color: #C19743;
+    text-decoration: none;
+}
+
+
+
+.adding a{
+    color: white;
+    text-decoration: none;
+    top: 15px;
+    position: absolute;
+    left: 757px;
+    text-align: center;
+    font-size: 55px;
+    font-family:Georgia, serif ;
+}
+
+
+
+
+.adding1 a{
+    top: 50px;
+    position: absolute;
+    left: 1257px;
+    text-align: center;
+    color: white; 
+    padding: 30px;
+    height: 80px;
+    
+}
+
+
+
+
+
+
+
+
+
+.adding1 a{
+    background-color: transparent;
+    border: 1px solid white; /* Button border color (black) */
+    color: white;/* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    position: absolute;
+    width: 300px;
+    
+}
+
+
+
+
+.adding1 a:hover{
+    background-color: #C19743; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+    text-decoration: none;
+}
+
+
+
+
+.texty1{
+    top:350px;
+    position: absolute;
+    left:320px;
+    text-align: center;
+    color: white;
+    padding: 30px; 
+    font-family: joanna-nova,serif;
+    line-height: 1;
+    box-sizing: border-box;
+    letter-spacing: -.025em;
+    font-weight: 600;
+}
+
+
+.text p{
+    position: absolute;
+    top: 270px;
+    left: 800px;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+
+.white{
+    background-color: #F4ECFF;
+    width: 100%;
+    height: 9400px;
+}
+.text2 p{
+    position: absolute;
+    font-size: 20px;
+    top: 850px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 0 solid #e2e8f0;
+    display: block;
+    line-height: 1.5rem;
+    margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+.bluecolor1 h1{
+    color: white;
+    letter-spacing: 8px;
+    font-size: 50px;
+   position: absolute;
+   left:180px;
+   top: 50px;
+   font-family:Georgia, serif;
+   letter-spacing: 8px;
+   font-weight: bold
+}
+.bluecolor1 h3{
+    font-size: 16px;color: white;position: absolute;left:220px;top: 150px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor1 h4{
+    font-size: 15px;color: white;position: absolute;left:30px;top: 200px;font-family:Georgia, serif;font-weight: bold;text-align: center;
+}
+.bluecolor1 p{
+    font-size: 15px;color: white;position: absolute;left:10px;top: 315px;font-family:Georgia, serif;font-weight: bold;text-align: center;
+}
+
+
+
+.bluecolor4 h1{
+    font-size: 50px;color: white;position: absolute;left:180px;top: 50px;font-family:Georgia, serif;letter-spacing: 8px;font-weight: bold;
+}
+.bluecolor4 h3{
+    font-size: 16px;color: white;position: absolute;left:220px;top: 150px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor4 h4{
+    font-size: 15px;color: white;position: absolute;left:30px;top: 200px;font-family:Georgia, serif;font-weight: bold;text-align: center;
+}
+.bluecolor4 p{
+    font-size: 15px;color: white;position: absolute;left:10px;top: 115px;font-family:Georgia, serif;font-weight: bold;text-align: center;
+}
+
+
+
+
+.bluecolor6 h1{
+    font-size: 50px;color: white;position: absolute;left:180px;top: 50px;font-family:Georgia, serif;letter-spacing: 8px;font-weight: bold;
+}
+.bluecolor6 h3{
+    font-size: 16px;color: white;position: absolute;left:220px;top: 150px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor6 h4{
+    font-size: 14px;color: white;position: absolute;left:10px;top: 240px;font-family:Georgia, serif;font-weight: bold;text-align: center;
+}
+
+
+
+.bluecolor8 h1{
+    font-size: 50px;color: white;position: absolute;left:120px;top: 50px;font-family:Georgia, serif;letter-spacing: 8px;font-weight: bold;
+}
+.bluecolor8 h3{
+    font-size: 16px;color: white;position: absolute;left:220px;top: 150px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor8 h4{
+    font-size: 16px;color: white;position: absolute;left:208px;top: 190px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor8 h6{
+    font-size: 16px;color: white;position: absolute;left:10px;top: 240px;font-family:Georgia, serif;font-weight: bold;text-align: center
+}
+
+
+.bluecolor12 h1{
+    font-size: 50px;color: white;position: absolute;left:200px;top: 50px;font-family:Georgia, serif;letter-spacing: 8px;font-weight: bold;
+}
+.bluecolor12 h3{
+    font-size: 16px;color: white;position: absolute;left:120px;top: 150px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor12 h4{
+    font-size: 16px;color: white;position: absolute;left:190px;top: 190px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor12 h6{
+    font-size: 16px;color: white;position: absolute;left:10px;top: 240px;font-family:Georgia, serif;font-weight: bold;text-align: center
+
+}
+
+
+
+
+.bluecolor14 h1{
+    font-size: 50px;color: white;position: absolute;left:100px;top: 50px;font-family:Georgia, serif;letter-spacing: 8px;font-weight: bold;
+}
+.bluecolor14 h3{
+    font-size: 16px;color: white;position: absolute;left:80px;top: 130px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor14 h4{
+    font-size: 16px;color: white;position: absolute;left:150px;top: 165px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor14 h5{
+    font-size: 16px;color: white;position: absolute;left:190px;top: 205px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor14 h6{
+    font-size: 15px;color: white;position: absolute;left:10px;top: 260px;font-family:Georgia, serif;font-weight: bold;text-align: center;
+}
+
+
+
+
+.bluecolor16 h1{
+    font-size: 50px;color: white;position: absolute;left:158px;top: 50px;font-family:Georgia, serif;letter-spacing: 8px;font-weight: bold;
+}
+.bluecolor16 h3{
+    font-size: 16px;color: white;position: absolute;left:80px;top: 130px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor16 h4{
+    font-size: 16px;color: white;position: absolute;left:150px;top: 165px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor16 h5{
+    font-size: 16px;color: white;position: absolute;left:190px;top: 205px;font-family:Georgia, serif;font-weight: bold;
+}
+.bluecolor16 h6{
+    font-size: 15px;color: white;position: absolute;left:10px;top: 260px;font-family:Georgia, serif;font-weight: bold;text-align: center;
+}
+
+
+
+
+
+
+.image200 {
+    width: 750px;
+    position: absolute;
+    top: 2000px;
+    left: 200px;
+    
+}
+.bluecolor1{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 550px;
+    position: absolute;
+    top: 2100px;
+    left: 780px;
+    
+}
+.texty3 h2{
+    color: white; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 150px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    position: relative;
+    left: 210px;
+    top: 395px;
+    color: white;
+    text-decoration: none;
+}
+
+.texty3 a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.texty3 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.image5{
+    width: 750px;
+    position: absolute;
+    top: 2880px;
+    left: 650px;
+    
+}
+.bluecolor4{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 550px;
+    position: absolute;
+    top: 2960px;
+    left: 200px;
+    
+}
+.texty5 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 420px;
+    position: absolute;
+    left: 200px;
+    text-align: center;
+    color: white; 
+    padding: 15px;
+}
+.texty5 a{
+    text-decoration: none;
+    color: white;
+}
+.texty5 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+.image7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 3800px;
+    width: 750px;
+    left: 200px;
+
+}
+
+  /* Style the video */
+video {
+    object-fit: cover; /* Cover the entire container */
+    width: 750px;
+    height: 500px;
+}
+
+
+.bluecolor6{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 550px;
+    position: absolute;
+    top: 3900px;
+    left: 770px;
+    
+}
+.texty7 h2{
+    color: white; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 420px;position: absolute;left: 220px;text-align: center;color: white; padding: 15px;
+}
+.texty7 a{
+    text-decoration: none;
+    color: white;
+}
+.texty7 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+
+.image9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 4750px;
+    width: 750px;
+    left: 580px;
+    
+}
+
+  /* Style the video */
+video {
+    object-fit: cover; /* Cover the entire container */
+    width: 750px;
+    height: 500px;
+}
+
+
+.bluecolor8{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 550px;
+    position: absolute;
+    top: 4850px;
+    left: 200px;
+    
+}
+.texty9 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 420px;
+    position: absolute;
+    left: 220px;
+    text-align: center;
+    color: white;
+     padding: 15px;
+}
+.texty9 a{
+    text-decoration: none;
+    color: white;
+}
+.texty9 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image13{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 5650px;
+    width: 750px;
+    left: 200px;
+    
+}
+
+  /* Style the video */
+video {
+    object-fit: cover; /* Cover the entire container */
+    width: 100%;
+    height: 100%;
+}
+
+
+.bluecolor12{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 550px;
+    position: absolute;
+    top: 5750px;
+    left: 765px;
+    
+}
+.texty13 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 420px;position: absolute;left: 220px;text-align: center;color: white; padding: 15px;
+}
+.texty13 a{
+    text-decoration: none;
+    color: white;
+}
+.texty13 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+
+.image15 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 6570px;
+    width: 750px;
+    left: 586px;
+    
+}
+
+  /* Style the video */
+video {
+    object-fit: cover; /* Cover the entire container */
+    width: 100%;
+    height: 100%;
+}
+
+
+.bluecolor14{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 550px;
+    position: absolute;
+    top: 6670px;
+    left: 200px;
+    
+}
+.texty15 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 420px;
+    position: absolute;
+    left: 220px;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+.texty15 a{
+    text-decoration: none;
+    color: white;
+}
+.texty15 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+.image17 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 7470px;
+    width: 750px;
+    left: 200px;
+    
+}
+
+  /* Style the video */
+video {
+    object-fit: cover; /* Cover the entire container */
+    width: 100%;
+    height: 100%;
+}
+
+
+.bluecolor16{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 550px;
+    position: absolute;
+    top: 7570px;
+    left: 760px;
+    
+}
+.texty17 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 440px;
+    position: absolute;
+    left: 220px;
+    text-align: center;
+    color: white; 
+    padding: 15px;
+}
+.texty17 a{
+    text-decoration: none;
+    color: white;
+}
+.texty17 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+@media (max-width:768px){
+    
+    .adding1 h2{
+        position: absolute;
+        font-size: 36px;
+        left: -465px;
+        top:450px;
+        
+    }
+    .adding h1{
+        position: absolute;
+        left: 120px;
+        top: -26px;
+    }
+    
+    .land2 img{
+        width: 250px;
+        position: absolute;
+        left: 90px;
+        height: 300px;
+        position: absolute;
+        top: 20px;
+    }
+    .land2{
+        width: 360px;
+    }
+    .land1 .image2 img{
+        width: 250px;
+        position: absolute;
+        left: 120px;
+        height: 300px;
+        position: absolute;
+        top: 200px;
+    }
+    .land1{
+        width: 490px;
+        position: absolute;
+        left: 1px;
+    }
+    .texty1 h1{
+        position: absolute;
+        left: -231px;
+        font-size: 16px;
+        top: 240px;
+    }
+    .room2 h1{
+        font-size: 120px;
+        top: 1900px;
+        position: absolute;
+        opacity: 1;
+        letter-spacing: 5px;
+        left: 2px;
+    }
+    .all .image200 img{
+        position: absolute;
+        left: -180px;
+        width: 430px;
+        height: 500px;
+    }
+    .all .bluecolor1{
+        position: absolute;
+        left: 20px;
+        top: 2450px;
+        width: 430px;
+        height: 400px;
+    }
+    .all2 .image5 img{
+        position: absolute;
+        left: -620px;
+        top: 75px;
+        width: 430px;
+        height: 400px;
+    }
+    .all2 .bluecolor4{
+        position: absolute;
+        left: 30px;
+        top: 3350px;
+        width: 430px;
+        height: 350px;
+    }
+    .all3 .image7 video{
+        position: absolute;
+        left: -170px;
+        width: 430px;
+        height: 450px;
+        top: 10px;
+    }
+    .all3 .bluecolor6{
+        position: absolute;
+        left: 30px;
+        top: 4230px;
+        width: 430px;
+        height: 350px;
+    }
+    .all4 .image9 video{
+        position: absolute;
+        left: -546px;
+        width: 426px;
+        height: 450px;
+        top: -30px;
+    }
+    .all4 .bluecolor8{
+        position: absolute;
+        left: 34px;
+        top: 5150px;
+        width: 427px;
+        height: 440px;
+    }
+
+    .all5 .image13 video{
+        position: absolute;
+        left: -166px;
+        width: 426px;
+        height: 450px;
+        top: 50px;
+    }
+    .all5 .bluecolor12{
+        position: absolute;
+        left: 34px;
+        top: 6150px;
+        width: 427px;
+        height: 410px;
+    }
+    .text p{
+        display: none;
+    }
+    .all i{
+        display: none;
+    }
+
+    .all6 .image15 video{
+        position: absolute;
+        left: -550px;
+        width: 426px;
+        height: 450px;
+        top: 50px;
+    }
+    .all6 .bluecolor14{
+        position: absolute;
+        left: 34px;
+        top: 7050px;
+        width: 427px;
+        height: 430px;
+    }
+
+
+    .all7 .image17 video{
+        position: absolute;
+        left: -165px;
+        width: 426px;
+        height: 450px;
+        top: 50px;
+    }
+    .all7 .bluecolor16{
+        position: absolute;
+        left: 35px;
+        top: 7970px;
+        width: 427px;
+        height: 430px;
+    }
+
+
+
+
+
+    
+    .texty17 .hi{
+        position: relative;
+        left: 125px;
+        color: white;
+        font-size: 30px;
+        font-family:Georgia, serif;
+        letter-spacing: 8px;
+        top: 10px;
+    }
+    .texty17 .hi2{
+        position: relative;
+        left: 30px;
+        color: white;
+        font-size: 16px;
+        font-family:Georgia, serif;
+        top: 14px;
+        font-size: 15px;
+    }
+    .texty17 .hi3{
+        position: relative;
+        color: white;
+        font-size: 15px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 20px;
+        left: -5px;
+    }
+    .texty17 .hi4{
+        position: relative;
+        color: white;
+        font-size: 10px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 20px;
+        left: -20px;
+    }
+    
+    .texty17 .hi5{
+        position: relative;
+        top: 60px;
+        left: 1px;
+        color: white;
+        text-align: center;
+    }
+    .texty17 .hi6{
+        color: white; /* Button text color (black) */
+        padding: 15px 37px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Transition for background color */
+        width: 150px;
+        background-color: #bb946e;
+        height: 60px;
+        text-align: center;
+        border: 1px solid white;
+        border-color: #bb946e;
+        transition-duration: .15s;
+        cursor: pointer;
+        font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+        position: relative;
+        left: 140px;
+        top: 70px;
+    }
+
+
+    
+
+
+    
+    .texty15 .hi{
+        position: relative;
+        left: 80px;
+        color: white;
+        font-size: 30px;
+        font-family:Georgia, serif;
+        letter-spacing: 8px;
+        top: 10px;
+    }
+    .texty15 .hi2{
+        position: relative;
+        left: 10px;
+        color: white;
+        font-size: 16px;
+        font-family:Georgia, serif;
+        top: 14px;
+        font-size: 15px;
+    }
+    .texty15 .hi3{
+        position: relative;
+        color: white;
+        font-size: 13px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 20px;
+        left: -5px;
+    }
+    .texty15 .hi4{
+        position: relative;
+        color: white;
+        font-size: 10px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 30px;
+        left: -10px;
+    }
+    .texty15 .hi5{
+        position: relative;
+        top: 40px;
+        left: 1px;
+    }
+    .texty15 .hi6{
+        color: white; /* Button text color (black) */
+        padding: 15px 37px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Transition for background color */
+        width: 150px;
+        background-color: #bb946e;
+        height: 60px;
+        text-align: center;
+        border: 1px solid white;
+        border-color: #bb946e;
+        transition-duration: .15s;
+        cursor: pointer;
+        font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+        position: relative;
+        left: 140px;
+        top: 60px;
+    }
+
+
+    .insta{
+        display: none;
+    }
+
+
+
+
+
+
+
+
+    .texty13 .hi{
+        position: relative;
+        left: 150px;
+        color: white;
+        font-size: 30px;
+        font-family:Georgia, serif;
+        letter-spacing: 8px;
+        top: 10px;
+    }
+    .texty13 .hi2{
+        position: relative;
+        left: 60px;
+        color: white;
+        font-size: 16px;
+        font-family:Georgia, serif;
+        top: 14px;
+        font-size: 15px;
+    }
+    .texty13 .hi3{
+        position: relative;
+        color: white;
+        font-size: 13px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 20px;
+        left: -5px;
+    }
+    .texty13 .hi4{
+        position: relative;
+        color: white;
+        font-size: 15px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 40px;
+        left: 1px;
+    }
+    .texty13 .hi5{
+        color: white; /* Button text color (black) */
+        padding: 15px 37px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Transition for background color */
+        width: 150px;
+        background-color: #bb946e;
+        height: 60px;
+        text-align: center;
+        border: 1px solid white;
+        border-color: #bb946e;
+        transition-duration: .15s;
+        cursor: pointer;
+        font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+        position: relative;
+        left: 140px;
+        top: 60px;
+    }
+
+    
+
+
+    .texty9 .hi{
+        position: relative;
+        left: 100px;
+        color: white;
+        font-size: 30px;
+        font-family:Georgia, serif;
+        letter-spacing: 8px;
+        top: 10px;
+    }
+    .texty9 .hi2{
+        position: relative;
+        left: 110px;
+        color: white;
+        font-size: 16px;
+        font-family:Georgia, serif;
+        letter-spacing: 4px;
+        top: 14px;
+    }
+    .texty9 .hi3{
+        position: relative;
+        color: white;
+        font-size: 13px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 20px;
+        left: -5px;
+    }
+    .texty9 .hi4{
+        position: relative;
+        color: white;
+        font-size: 15px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 40px;
+        left: 1px;
+    }
+    .texty9 .hi5{
+        color: white; /* Button text color (black) */
+        padding: 15px 37px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Transition for background color */
+        width: 150px;
+        background-color: #bb946e;
+        height: 60px;
+        text-align: center;
+        border: 1px solid white;
+        border-color: #bb946e;
+        transition-duration: .15s;
+        cursor: pointer;
+        font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+        position: relative;
+        left: 140px;
+        top: 60px;
+    }
+
+
+
+    .texty3 .hi{
+        position: relative;
+        left: 140px;
+        color: white;
+        font-size: 30px;
+        font-family:Georgia, serif;
+        letter-spacing: 8px;
+        top: 10px;
+    }
+    .texty7 .hi{
+        position: relative;
+        left: 140px;
+        color: white;
+        font-size: 30px;
+        font-family:Georgia, serif;
+        letter-spacing: 8px;
+        top: 10px;
+    }
+    .texty7 .hi2{
+        position: relative;
+        left: 100px;
+        color: white;
+        font-size: 18px;
+        font-family:Georgia, serif;
+        letter-spacing: 4px;
+        top: 14px;
+    }
+    .texty7 .hi3{
+        position: relative;
+        color: white;
+        font-size: 13px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 30px;
+        left: -5px;
+    }
+    .texty7 .hi4{
+        color: white; /* Button text color (black) */
+        padding: 15px 37px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Transition for background color */
+        width: 150px;
+        background-color: #bb946e;
+        height: 60px;
+        text-align: center;
+        border: 1px solid white;
+        border-color: #bb946e;
+        transition-duration: .15s;
+        cursor: pointer;
+        font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+        position: relative;
+        left: 140px;
+        top: 60px;
+    }
+
+    .texty5 .hi{
+        position: relative;
+        left: 140px;
+        color: white;
+        font-size: 30px;
+        font-family:Georgia, serif;
+        letter-spacing: 8px;
+        top: 10px;
+    }
+    .texty5 .hi2{
+        position: relative;
+        left: 80px;
+        color: white;
+        font-size: 18px;
+        font-family:Georgia, serif;
+        letter-spacing: 4px;
+        top: 14px;
+    }
+    .texty5 .hi3{
+        position: relative;
+        color: white;
+        font-size: 13px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 30px;
+        left: -5px;
+    }
+    .texty5 .hi4{
+        position: relative;
+        color: white;
+        font-size: 14px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 40px;
+    }
+    .texty5 .hi5{
+        color: white; /* Button text color (black) */
+        padding: 15px 37px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Transition for background color */
+        width: 150px;
+        background-color: #bb946e;
+        height: 60px;
+        text-align: center;
+        border: 1px solid white;
+        border-color: #bb946e;
+        transition-duration: .15s;
+        cursor: pointer;
+        font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+        position: relative;
+        left: 140px;
+        top: 80px;
+    }
+    .texty3 .hi2{
+        position: relative;
+        left: 100px;
+        color: white;
+        font-size: 20px;
+        font-family:Georgia, serif;
+        letter-spacing: 4px;
+        top: 14px;
+    }
+    .texty3 .hi3{
+        position: relative;
+        color: white;
+        font-size: 13px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 10px;
+        left: -5px;
+    }
+    .texty3 .hi4{
+        position: relative;
+        color: white;
+        font-size: 14px;
+        font-family:Georgia, serif;
+        text-align: center;
+        top: 20px;
+    }
+    .texty3 .hi5{
+        color: white; /* Button text color (black) */
+        padding: 15px 37px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Transition for background color */
+        width: 150px;
+        background-color: #bb946e;
+        height: 60px;
+        text-align: center;
+        border: 1px solid white;
+        border-color: #bb946e;
+        transition-duration: .15s;
+        cursor: pointer;
+        font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+        position: relative;
+        left: 140px;
+        top: 30px;
+    }
+    h5{
+        margin-left: 180px;
+    }
+
+
+
+    .footer .copyright{
+        left: 20px;
+        top: 480px;
+    }
+
+    .list-unstyled p{
+        left: 1px;
+        position: absolute;
+    }
+
+
+    .email-input{
+        position: absolute;
+        left: 1myji50px;
+        top: 300px;
+    }
+
+
+
+    .footer{
+        position: absolute;
+        top: 5000px;
+    }
+
+
+
+
+    .insta i{
+        position: absolute;
+        top: 200px;
+        font-size: 30px;
+        left: 10px;
+    }
+
+
+
+    .transparent-button8{
+        position: relative;
+        top: -620px;
+        left: -820px;
+        font-size: 10000px;
+    }
+    .logo2 .hi12{
+        position: relative;
+        top: 700px;
+        left: -525px;
+        font-size: 32px;
+        color: white;
+        
+    }
+
+
+    .hi88{
+        position: absolute;
+        text-align: center;
+        background-color: #CEAB8C;
+        width: 486px;
+        height: 540px;
+        left: 2px;
+        top: 8670px;
+        opacity: .9;
+    }
+    .bg{
+        display: none;
+    }
+
+
+    .logo2 img{
+        position: absolute;
+        top: -450px;
+        left: -533px;
+        }
+
+    .shaking-icon{
+        display: none;
+    }
+    .footer .copyright div span{
+        color: yellow;
+        position: relative;
+        left: -400px;
+    }
+    
+    
+    
+    .footer .copyright > span{
+        color: #059E58;
+        position: relative;
+        left: -400px;
+        top: 70px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+.logo2{
+    text-align: center;
+    font-family:Georgia, serif ;
+    top: 7600px;
+    position:absolute;
+    left: 570px;
+}
+.logo2 h9{
+    position: absolute;
+    top: 1280px;
+    font-size: 30px;
+    left: 90px;
+    color: white; 
+    font-family:Georgia, serif ;
+}
+.logo2 img{
+    opacity: .1;
+    height: 470px;
+    width: 400px;
+    position: relative;
+    top: 1100px;
+}
+.bg{
+    position: absolute;
+    text-align: center;
+    background-color: #CEAB8C;
+    width: 490px;
+    height: 540px;
+    left: 520px;
+    top: 8700px;
+    opacity: .9;
+    
+}
+.transparent-button8 a{
+    background-color: transparent;
+    border: 1px solid white; /* Button border color (black) */
+    color: white; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    position: absolute;
+    top:1400px;
+    left: 60px;
+    
+}
+.transparent-button8:hover a{
+    background-color: white; /* Change to black on hover */
+    color: #CEAB8C; /* Change text color to white on hover */
+    text-decoration: none;
+}
+
+.insta {
+    text-align: center;
+    font-family:Georgia, serif ;
+    position: absolute;
+    top: 8800px; 
+    font-size: 30px;
+    left: 760px;
+    color: white;
+}
+.down{
+    text-align: center;
+    font-family:Georgia, serif ;
+    top: -1540px;
+    position: absolute;
+    font-size: 40px;
+    left: 10px;
+    color: white;
+    
+}
+.logo2 p{
+    position: absolute;
+    top: 1350px;
+    font-size: 30px;
+    left: 200px;
+    color: white;
+}
+
+
+
+
+.image2:hover {
+    box-shadow: 5px 5px 250px rgba(0, 0, 0, 0.5);
+}
+.image5:hover {
+    box-shadow: 5px 5px 250px rgba(0, 0, 0, 0.5);
+}
+
+video:hover{
+    box-shadow: 5px 5px 250px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+
+.footer{
+    background-color: #2b3a41;
+    top: 9200px;
+    position: absolute;
+    height: 1000px;
+    width: 100%;
+
+}
+.list-unstyled P{
+    margin-right: 170px;
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+   
+}
+.list-unstyled p:hover a{
+    text-decoration: none;
+    color: white;
+}
+h5{
+    margin-right: 170px;
+    padding-top: 1px;
+   
+}
+.footer .copyright div span{
+    color: yellow;
+}
+
+
+
+.footer .copyright > span{
+    color: #059E58;
+}
+.contact{
+    position: relative;
+    left: 800px;
+    margin-top: -460px;
+}
+.social-media-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default list padding */
+    display: flex; /* Use flexbox to arrange them horizontally */
+  }
+  
+  .social-media-list li {
+    margin-right: 30px; /* Add some space between each social media icon/link */
+    left: 80px;
+    position: relative;
+  }
+  .email-input {
+    width: 380px; /* Set the width as desired */
+    height: 70px; /* Set the height as desired */
+    padding: 20px; /* Add padding for better appearance */
+    font-size: 16px; /* Adjust the font size as needed */
+    position: relative;
+    top: -100px;
+    left: -75px;
+    background-color: #2b3a41;
+    border: 1px solid white;
+  }
+  .footer .copyright{
+    position: relative;
+    top: 420px;
+    left: 360px;
+    font-size: 25px;
+  }
+  #back-to-top-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+
+  #back-to-top-arrow a {
+    text-decoration: none;
+  }
+
+  #back-to-top-arrow svg {
+    position: absolute;
+    
+    width: 40px;
+    height: 40px;
+    fill: #007bff; /* Arrow color */
+    transition: fill 0.3s ease-in-out;
+  }
+
+  #back-to-top-arrow svg:hover {
+    fill: #ff0000; /* Change color on hover (optional) */
+  }
+  .shaking-icon {
+    font-size: 40px; /* Adjust the icon size as needed */
+    color: white;
+    animation: shake 1s infinite;
+    position: absolute;
+    top: 360px;
+    
+    cursor: pointer;
+    position: absolute;
+    top: 320px;
+    left: 736px;
+
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+  }
+
+
+
+
+
+

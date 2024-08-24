@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="valid.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@200&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="all">
+        <div class="land1 d-flex justify-content-center align-items-center">
+       
+            <div class="texty1">
+               <img src="https://s3.eu-west-1.amazonaws.com/prod-hls-photos/photos/779/logo.jpg?width=1000&height=108&ts=1604320277">
+               <h1>Need Help? </br> Call now</br>0207 2673641</h1>
+    
+    
+            <div class="bord">
+                <form class="row g-3">
+
+                
+    
+                    <div class="col-md-4">
+                        <div class="all31">
+                            <div class="all30">
+                                <h1 class="mo1" for="validationDefault01" id="email-label">Email Adress</h1>
+                                <input type="email" class="form-control" id="email-field" onkeyup="validateEmail()"  required>
+                                <span id="email-error"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+    
+                    <div class="col-md-4">
+                        <div class="all33">
+                            <div class="all32">
+                                <h1  for="password" class="form-label" >PASSWORD</h1>
+                                <input style="color: black;" type="password" class="form-control" id="password" value="" required>
+                                <p style="position: absolute;top: 220px;" id="message"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+    
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input  style="position: absolute;left: 840px;top: 342px;" class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                        <label  style="position: absolute;left: 600px;top: 340px;" class="form-check-label" for="invalidCheck2">Agree to terms and conditions</label>
+                      </div>
+                    </div>
+
+
+    
+                    <div class="col-12">
+                      <button onclick="validatePassword()" style="position: absolute;left: 675px;top: 300px;background-color: #701c25;" class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+    
+                </form>
+            </div>
+    
+    
+    
+    
+               
+           
+    
+    
+               <script>
+               function validatePassword() {
+        // Get the password input element
+        var passwordInput = document.getElementById("password");
+        // Get the value of the password
+        var password = passwordInput.value;
+        
+        // Regular expressions to check for password requirements
+        var hasCapitalLetter = /[A-Z]/.test(password);
+        var hasNumber = /\d/.test(password);
+        var hasSymbol = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password);
+        var isLengthValid = password.length >= 8;
+    
+        // Check if the password meets all the conditions
+        if (hasCapitalLetter && hasNumber && hasSymbol && isLengthValid) {
+            // Password is valid
+            document.getElementById("message").innerHTML = "Password is valid!";
+        } else {
+            // Password is invalid
+            document.getElementById("message").innerHTML = "Password must meet the following conditions:\n" +
+                "- Contain at least one capital letter\n" +
+                "- Contain at least one number\n" +
+                "- Contain at least one symbol\n" +
+                "- Have a minimum length of 8 characters.";
+        }
+    }
+            </script>
+    </div>
+   
+
+
+
+
+</body>
+</html>

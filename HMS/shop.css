@@ -1,0 +1,1560 @@
+.land1{
+    background-color: #265a5b;
+    width: 100%;
+    height: 750px;
+    position: absolute;
+}
+*{  /* this one is for all the code */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+body{ /* this one is for the body and it is not nessaccery */
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+.header{ /* this one for the navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header::before{ /* this one is for the navbar */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+.header::after{  /* this one is for the navbar */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.header:hover::after{ /* this one is for the navbar */ 
+    left: 100%;
+
+}
+
+
+.navbar a{ /* this one is for the navbar */
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    left: -90px;
+    margin-right: 30px;
+    top: 50px;
+}
+
+#check{ 
+    display: none;
+}
+
+.icons{ /* this one is for the item in the navbar */
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width:992px){
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width:768px){
+    .icons{
+        display:inline-flex;
+    }
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color:rgba(0,0,0,.1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    #check:checked~.navbar{
+        height: 17.7rem;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+        position: relative;
+        margin-right: 20px;
+        left: 10px;
+        top: 1px;
+    }
+
+    #check:checked~.navbar a{
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+}
+.navbar a:hover{
+    color: #C19743;
+}
+.navbar a.active  {
+    color: #C19743; /* Change the text color to your desired color */
+}
+.adding a:hover{
+    color: #C19743;
+    text-decoration: none;
+    
+}
+.adding a{
+    color: white;
+    font-family:Georgia, serif ;
+    text-decoration: none;
+    position: relative;
+}
+.adding h1{
+    position: relative;
+    left: -430px;
+    top: -370px;
+}
+.adding1 a{
+    border: 1px solid white; /* Button border color (black) */
+    padding: 25px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    position: absolute;
+    width: 300px;
+    background-color: #bb946e;
+    text-decoration: none;
+    color: white;
+}
+.adding1 a:hover{
+    background-color: #99A7B6; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+    text-decoration: none;
+}
+
+.navbar-menu li.active a {
+    color: #C19743; /* Change the text color to your desired color */
+}
+.white{
+    background-color: #F4ECFF;
+    width: 100%;
+    height: 11400px;
+}
+.text1 p{
+    position: absolute;
+    font-size: 32px;
+    top: 800px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 0 solid #e2e8f0;
+    display: block;
+    line-height: 1.5rem;
+    margin-top: 1em;
+}
+
+
+
+
+
+
+
+.adding a:hover{
+    color: #C19743;
+    text-decoration: none;
+}
+
+
+
+.adding a{
+    color: white;
+    text-decoration: none;
+    top: 15px;
+    position: absolute;
+    left: 700px;
+    text-align: center;
+    font-size: 55px;
+    font-family:Georgia, serif ;
+}
+
+
+
+
+.adding1 a{
+    top: 50px;
+    position: absolute;
+    left: 1170px;
+    text-align: center;
+    color: white; 
+    padding: 30px;
+    height: 80px;
+    
+}
+
+
+
+
+
+
+
+
+
+.adding1 a{
+    background-color: transparent;
+    border: 1px solid white; /* Button border color (black) */
+    color: white;/* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    position: absolute;
+    width: 300px;
+    
+}
+
+
+
+
+.adding1 a:hover{
+    background-color: #C19743; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 1050px;
+    width: 750px;
+    left: 200px;
+
+    
+}
+.bluecolor1{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 320px;
+    position: absolute;
+    top: 1270px;
+    left: 790px;
+    
+}
+.texty3 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 150px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 220px;position: absolute;left: 210px;text-align: center;color: white; padding: 20px;font-size: 18px
+}
+.texty3 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+.image5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 2050px;
+    width: 750px;
+    left: 620px;
+
+    
+}
+.bluecolor4{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 320px;
+    position: absolute;
+    top: 2320px;
+    left: 200px;
+    
+}
+.texty5 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 220px;position: absolute;left: 200px;text-align: center;color: white; padding: 20px;font-size: 18px
+}
+.texty5 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+.room p{
+    position: relative; font-size: 40px; left: 326px;top: 60px;text-decoration: none;color: white;font-size: 20px;
+}
+.room h1{
+    position: relative; font-size: 100px; left: 41px;top: 130px;text-decoration: none;color: white;text-align: center;font-family: joanna-nova,serif;font-weight: 600;
+}
+.room h2{
+    position: relative; font-size: 100px; left: 25px;top: 135px;text-decoration: none;color: white;text-align: center; white-space: nowrap;font-family: joanna-nova,serif;font-weight: 600;
+}
+
+
+
+
+
+
+.bluecolor1 h1{
+    font-size: 25px;color: white;position: absolute;left:110px;top: 50px;font-family:Georgia, serif;white-space: nowrap
+}
+.bluecolor1 h3{
+    font-size: 15px;color: white;position: absolute;left:10px;top: 120px;font-family:Georgia, serif;text-align: center;
+}
+
+
+
+
+
+.bluecolor4 h1{
+    font-size: 25px;color: white;position: absolute;left:125px;top: 50px;font-family:Georgia, serif;white-space: nowrap
+}
+.bluecolor4 h3{
+    font-size: 15px;color: white;position: absolute;left:10px;top: 115px;font-family:Georgia, serif;text-align: center;
+}
+
+
+
+
+.bluecolor6 h1{
+    font-size: 35px;color: white;position: absolute;left:193px;top: 50px;font-family:Georgia, serif;white-space: nowrap
+}
+.bluecolor6 h3{
+    font-size: 14px;color: white;position: absolute;left:10px;top: 130px;font-family:Georgia, serif;text-align: center;
+}
+
+
+
+
+.bluecolor8 h1{
+    font-size: 28px;color: white;position: absolute;left:120px;top: 50px;font-family:Georgia, serif;white-space: nowrap
+}
+.bluecolor8 h3{
+    font-size: 15px;color: white;position: absolute;left:10px;top: 110px;font-family:Georgia, serif;font-weight: bold;text-align: center;
+}
+
+
+
+
+
+.bluecolor12 h1{
+    font-size: 25px;color: white;position: absolute;left:120px;top: 38px;font-family:Georgia, serif;white-space: nowrap
+}
+.bluecolor12 h3{
+    font-size: 25px;color: white;position: absolute;left:160px;top:75px;font-family:Georgia, serif
+}
+.bluecolor12 h4{
+    font-size: 15px;color: white;position: absolute;left:10px;top: 130px;font-family:Georgia, serif;font-weight: bold;text-align: center;
+}
+
+
+
+
+
+.bluecolor14 h1{
+    font-size: 34px;color: white;position: absolute;left:143px;top: 50px;font-family:Georgia, serif;white-space: nowrap
+}
+.bluecolor14 h3{
+    font-size: 15px;color: white;position: absolute;left:10px;top: 115px;font-family:Georgia, serif;font-weight: bold;text-align: center;
+}
+
+
+
+
+
+
+.bluecolor16 h1{
+    font-size: 25px;color: white;position: absolute;left:80px;top: 50px;font-family:Georgia, serif;white-space: nowrap
+}
+.bluecolor16 h3{
+    font-size: 23px;color: white;position: absolute;left:200px;top: 90px;font-family:Georgia, serif;white-space: nowrap
+}
+.bluecolor16 h4{
+    font-size: 15px;color: white;position: absolute;left:10px;top: 150px;font-family:Georgia, serif;text-align: center;
+}
+
+
+
+
+
+.bluecolor18 h1{
+    font-size: 25px;color: white;position: absolute;left:148px;top: 50px;font-family:Georgia, serif;white-space: nowrap
+}
+.bluecolor18 h3{
+    font-size: 18px;color: white;position: absolute;left:60px;top:140px;font-family:Georgia, serif;white-space: nowrap
+}
+
+
+
+
+.bluecolor20 h1{
+    font-size: 25px;color: white;position: absolute;left:178px;top: 50px;font-family:Georgia, serif;white-space: nowrap
+}
+.bluecolor20 h3{
+    font-size: 18px;color: white;position: absolute;left:15px;top:116px;font-family:Georgia, serif;text-align: center;
+}
+
+
+
+
+
+
+
+
+
+.image7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 3050px;
+    width: 750px;
+    left: 200px;
+}
+
+  /* Style the video */
+
+
+
+.bluecolor6{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 320px;
+    position: absolute;
+    top: 3290px;
+    left: 800px;
+    
+}
+.texty7 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 240px;position: absolute;left: 190px;text-align: center;color: white; padding: 20px;font-size: 18px
+}
+.texty7 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+
+.image9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 4050px;
+    width: 750px;
+    left: 620px;
+    
+}
+
+  /* Style the video */
+
+
+
+.bluecolor8{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 320px;
+    position: absolute;
+    top: 4260px;
+    left: 200px;
+    
+}
+.texty9 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 245px;position: absolute;left: 200px;text-align: center;color: white; padding: 20px;font-size: 18px
+}
+.texty9 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image13{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 5050px;
+    width: 750px;
+    left: 200px;
+    
+}
+
+  /* Style the video */
+
+
+
+.bluecolor12{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 320px;
+    position: absolute;
+    top: 5260px;
+    left: 800px;
+    
+}
+.texty13 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 233px;position: absolute;left: 220px;text-align: center;color: white; padding: 20px;font-size: 18px
+}
+.texty13 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+
+.image15 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 6050px;
+    width: 750px;
+    left: 620px;
+    
+}
+
+  /* Style the video */
+
+
+
+.bluecolor14{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 320px;
+    position: absolute;
+    top: 6260px;
+    left: 200px;
+    
+}
+.texty15 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 220px;position: absolute;left: 200px;text-align: center;color: white; padding: 20px;font-size: 18px
+}
+.texty15 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+.image17 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 7050px;
+    width: 750px;
+    left: 200px;
+    
+}
+
+  /* Style the video */
+
+
+
+.bluecolor16{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 320px;
+    position: absolute;
+    top: 7260px;
+    left: 800px;
+    
+}
+.texty17 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 240px;position: absolute;left: 220px;text-align: center;color: white; padding: 20px;font-size: 18px
+}
+.texty17 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+
+.image19 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 8050px;
+    width: 750px;
+    left: 620px;
+    
+}
+
+  /* Style the video */
+
+
+
+.bluecolor18{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 320px;
+    position: absolute;
+    top: 8260px;
+    left: 200px;
+}
+.texty19 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 240px;position: absolute;left: 200px;text-align: center;color: white; padding: 20px;font-size: 18px
+}
+.texty19 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+.image21 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 9050px;
+    width: 750px;
+    left: 200px;
+    
+}
+
+  /* Style the video */
+img {
+    object-fit: cover; /* Cover the entire container */
+    width: 100%;
+    height: 100%;
+}
+
+
+.bluecolor20{
+    background-color: #2b3a41; 
+    width: 570px;
+    height: 320px;
+    position: absolute;
+    top: 9260px;
+    left: 800px;
+    
+}
+.texty21 h2{
+    color: #000; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    width: 170px;
+    background-color: #bb946e;
+    height: 60px;
+    text-align: center;
+    border: 1px solid white;
+    border-color: #bb946e;
+    transition-duration: .15s;
+    cursor: pointer;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    top: 240px;position: absolute;left: 210px;text-align: center;color: white; padding: 20px;font-size: 18px;
+}
+.texty21 h2:hover{
+    background-color: transparent; /* Change to black on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo2{
+    text-align: center;
+    font-family:Georgia, serif ;
+    top:9000px;
+    position:absolute;
+    left: 570px;
+}
+.logo2 h9{
+    position: absolute;
+    top: 1280px;
+    font-size: 30px;
+    left: 90px;
+    color: white; 
+    font-family:Georgia, serif ;
+}
+.logo2 img{
+    opacity: .1;
+    height: 470px;
+    width: 400px;
+    position: relative;
+    top: 1100px;
+}
+.bg{
+    position: absolute;
+    text-align: center;
+    background-color: #CEAB8C;
+    width: 490px;
+    height: 540px;
+    left: 520px;
+    top: 10080px;
+    opacity: .9;
+    
+}
+.transparent-button8 a{
+    background-color: transparent;
+    border: 1px solid white; /* Button border color (black) */
+    color: white; /* Button text color (black) */
+    padding: 15px 37px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color */
+    position: absolute;
+    top:1400px;
+    left: 60px;
+    
+}
+.transparent-button8:hover a{
+    background-color: white; /* Change to black on hover */
+    color: #CEAB8C; /* Change text color to white on hover */
+    text-decoration: none;
+}
+.insta {
+    text-align: center;
+    font-family:Georgia, serif ;
+    position: absolute;
+    top: 10180px; 
+    font-size: 30px;
+    left: 20px;
+    color: white;
+    left: 755px;
+}
+.down{
+    text-align: center;
+    font-family:Georgia, serif ;
+    top: -1540px;
+    position: absolute;
+    font-size: 40px;
+    left: 10px;
+    color: white;
+    
+}
+.logo2 p{
+    position: absolute;
+    top: 1350px;
+    font-size: 30px;
+    left: 200px;
+    color: white;
+}
+
+
+
+
+.footer{
+    background-color: #2b3a41;
+    top: 10600px;
+    position: absolute;
+    height: 1000px;
+    width: 100%;
+
+}
+.list-unstyled P{
+    margin-right: 170px;
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+   
+}
+.list-unstyled p:hover a{
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+}
+h5{
+    margin-right: 170px;
+    padding-top: 1px;
+   
+}
+.footer .copyright div span{
+    color: yellow;
+}
+img:hover {
+    box-shadow: 5px 5px 250px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.footer .copyright > span{
+    color: #059E58;
+}
+.contact{
+    position: relative;
+    left: 800px;
+    margin-top: -460px;
+}
+.social-media-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default list padding */
+    display: flex; /* Use flexbox to arrange them horizontally */
+  }
+  
+  .social-media-list li {
+    margin-right: 30px; /* Add some space between each social media icon/link */
+    left: 80px;
+    position: relative;
+  }
+  .email-input {
+    width: 380px; /* Set the width as desired */
+    height: 70px; /* Set the height as desired */
+    padding: 20px; /* Add padding for better appearance */
+    font-size: 16px; /* Adjust the font size as needed */
+    position: relative;
+    top: -100px;
+    left: -75px;
+    background-color: #2b3a41;
+    border: 1px solid white;
+  }
+  .footer .copyright{
+    position: relative;
+    top: 420px;
+    left: 360px;
+    font-size: 25px;
+  }
+  #back-to-top-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+
+  #back-to-top-arrow a {
+    text-decoration: none;
+  }
+
+  #back-to-top-arrow svg {
+    position: absolute;
+    
+    width: 40px;
+    height: 40px;
+    fill: #007bff; /* Arrow color */
+    transition: fill 0.3s ease-in-out;
+  }
+
+  #back-to-top-arrow svg:hover {
+    fill: #ff0000; /* Change color on hover (optional) */
+  }
+  .shaking-icon {
+    font-size: 40px; /* Adjust the icon size as needed */
+    color: white;
+    animation: shake 1s infinite;
+    position: absolute;
+    top: 360px;
+    cursor: pointer;
+    position: absolute;
+    top: 320px;
+    left: 755px;
+
+  }
+
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width : 768px){
+    .adding1 a{
+        position: absolute;
+        font-size: 36px;
+        left: 100px;
+        top:310px
+    }
+    .adding a{
+        position: absolute;
+        left: 180px;
+        top: -10px;
+    }
+    .room .hi{
+        position: absolute;
+        left: 220px;
+        top: 240px;
+    }
+    .room .hi2{
+        position: absolute;
+        font-size: 40px;
+        left: 150px;
+        top: 430px;
+        letter-spacing: 4px;
+    }
+    .room .hi3{
+        position: absolute;
+        font-size: 40px;
+        left: 110px;
+        top: 490px;
+        letter-spacing: 4px;
+    }
+    .all .image2 img{
+        position: absolute;
+        left: -170px;
+        top: 75px;
+        width: 430px;
+        height: 400px;
+    }
+    .all .bluecolor1{
+        position: absolute;
+        left: 30px;
+        top: 1520px;
+        width: 430px;
+        height: 350px;
+    }
+    .texty3 .hi{
+        position: relative;
+        left: 34px;
+    }
+    .texty3 .hi3{
+        position: relative;
+        left: 150px;
+        top: 190px;
+    }
+
+
+
+
+
+    .all2 .image5 img{
+        position: absolute;
+        left: -590px;
+        top: -45px;
+        width: 430px;
+        height: 400px;
+    }
+    .all2 .bluecolor4{
+        position: absolute;
+        left: 30px;
+        top: 2380px;
+        width: 430px;
+        height: 350px;
+    }
+    .texty5 .hi{
+        position: relative;
+        left: 54px;
+    }
+    .texty5 .hi3{
+        position: relative;
+        left: 125px;
+        top: 130px;
+    }
+    .texty5 .hi2{
+        position: relative;
+        left: 3px;
+        top: 90px;
+    }
+
+
+
+    .all3 .image7 img{
+        position: absolute;
+        left: -170px;
+        top: -220px;
+        width: 430px;
+        height: 400px;
+    }
+    .all3 .bluecolor6{
+        position: absolute;
+        left: 30px;
+        top: 3230px;
+        width: 430px;
+        height: 350px;
+    }
+    .texty7 .hi{
+        position: relative;
+        left: 124px;
+    }
+    .texty7 .hi3{
+        position: relative;
+        left:135px;
+        top: 90px;
+    }
+    .texty7 .hi2{
+        position: relative;
+        left: 3px;
+        top: 60px;
+    }
+
+
+
+
+
+    .all4 .image9 img{
+        position: absolute;
+        left: -590px;
+        top: -360px;
+        width: 430px;
+        height: 400px;
+    }
+    .all4 .bluecolor8{
+        position: absolute;
+        left: 30px;
+        top: 4090px;
+        width: 430px;
+        height: 350px;
+    }
+    .texty9 .hi{
+        position: relative;
+        left: 64px;
+    }
+    .texty9 .hi3{
+        position: relative;
+        left:135px;
+        top: 90px;
+    }
+    .texty9 .hi2{
+        position: relative;
+        left: 3px;
+        top: 60px;
+    }
+
+
+
+
+    .all5 .image13 img{
+        position: absolute;
+        left: -170px;
+        top: -480px;
+        width: 430px;
+        height: 400px;
+    }
+    .all5 .bluecolor12{
+        position: absolute;
+        left: 30px;
+        top: 4970px;
+        width: 430px;
+        height: 350px;
+    }
+    .texty13 .hi{
+        position: relative;
+        left: 44px;
+    }
+    .texty13 .hi3{
+        position: relative;
+        left:1px;
+        top: 70px;
+    }
+    .texty13 .hi2{
+        position: relative;
+        left: 70px;
+        top: 60px;
+    }
+    .texty13 .hi4{
+        position: relative;
+        left: 130px;
+        top: 90px;
+    }
+
+
+
+
+    .all6 .image15 img{
+        position: absolute;
+        left: -586px;
+        top: -600px;
+        width: 430px;
+        height: 400px;
+    }
+    .all6 .bluecolor14{
+        position: absolute;
+        left: 34px;
+        top: 5850px;
+        width: 430px;
+        height: 350px;
+    }
+    .texty15 .hi{
+        position: relative;
+        left: 70px;
+    }
+    .texty15 .hi3{
+        position: relative;
+        left:141px;
+        top: 90px;
+    }
+    .texty15 .hi2{
+        position: relative;
+        left: 1px;
+        top: 60px;
+    }
+
+
+
+
+    .all7 .image17 img{
+        position: absolute;
+        left: -166px;
+        top: -700px;
+        width: 430px;
+        height: 400px;
+    }
+    .all7 .bluecolor16{
+        position: absolute;
+        left: 34px;
+        top: 6750px;
+        width: 430px;
+        height: 350px;
+    }
+    .texty17 .hi{
+        position: relative;
+        left: 10px;
+    }
+    .texty17 .hi3{
+        position: relative;
+        left:1px;
+        top: 90px;
+    }
+    .texty17 .hi2{
+        position: relative;
+        left: 135px;
+        top: 60px;
+    }
+    .texty17 .hi4{
+        position: relative;
+        left: 140px;
+        top:110px;
+    }
+
+
+
+
+
+    .all8 .image19 img{
+        position: absolute;
+        left: -586px;
+        top: -800px;
+        width: 430px;
+        height: 400px;
+    }
+    .all8 .bluecolor18{
+        position: absolute;
+        left: 34px;
+        top: 7650px;
+        width: 430px;
+        height: 250px;
+    }
+    .texty19 .hi{
+        position: relative;
+        left: 70px;
+    }
+    .texty19 .hi3{
+        position: relative;
+        left:120px;
+        top: 90px;
+    }
+    .texty19 .hi2{
+        position: relative;
+        left: 30px;
+        top: 60px;
+        font-size: 14px;
+    }
+
+
+
+    .all9 .image21 img{
+        position: absolute;
+        left: -166px;
+        top: -1000px;
+        width: 430px;
+        height: 400px;
+    }
+    .all9 .bluecolor20{
+        position: absolute;
+        left: 34px;
+        top: 8450px;
+        width: 430px;
+        height: 250px;
+    }
+    .texty21 .hi{
+        position: relative;
+        left: 100px;
+    }
+    .texty21 .hi3{
+        position: relative;
+        left:120px;
+        top: 70px;
+    }
+    .texty21 .hi2{
+        position: relative;
+        left: 3px;
+        top: 60px;
+        font-size: 14px;
+    }
+
+    .bg{
+        position: relative;
+        left: 50000px;
+    }
+    .insta{
+        display: none;
+    }
+    h5{
+        margin-left: 180px;
+        
+    }
+
+
+
+    .footer .copyright{
+        left: 20px;
+        top: 480px;
+    }
+
+    .list-unstyled p{
+        left: 1px;
+        position: absolute;
+    }
+
+
+    .email-input{
+        position: absolute;
+        left: 50px;
+        top: 300px;
+    }
+
+
+
+    .footer{
+        position: absolute;
+        top: 5000px;
+    }
+
+
+
+
+    .insta i{
+        position: absolute;
+        top: 200px;
+        font-size: 30px;
+        left: 10px;
+    }
+
+
+
+    .transparent-button8{
+        position: relative;
+        top: -1220px;
+        left: -600px;
+        font-size: 10000px;
+    }
+    .logo2 .hi12{
+        position: relative;
+        top: 150px;
+        left: -435px;
+        font-size: 32px;
+        color: white;
+        
+    }
+
+
+    .hi88{
+        position: absolute;
+        text-align: center;
+        background-color: #CEAB8C;
+        width: 486px;
+        height: 540px;
+        left: 2px;
+        top: 9070px;
+        opacity: .9;
+    }
+    .bg{
+        display: none;
+    }
+
+
+    .logo2 img{
+        position: absolute;
+        top: 80px;
+        left: -543px;
+        }
+
+    .shaking-icon{
+        display: none;
+    }
+
+    .footer{
+        position: relative;
+        top: -1900px;
+    }
+    
+   
+   
+}
+
+
+
+
+
+
+.content-box {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0f0f0;
+}
+
+
